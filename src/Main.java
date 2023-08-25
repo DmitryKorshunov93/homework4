@@ -31,31 +31,32 @@ public class Main {
         byte bc = 67;
         System.out.println(bc);
 
-        byte LP = 23;
-        byte AS = 27;
-        byte EA = 30;
-        int totalStudents = LP + AS + EA;
+        byte lp = 23;
+        byte as = 27;
+        byte ea = 30;
+        int totalStudents = lp + as + ea;
         short sheets = 480;
         int sheetsStudent = sheets / totalStudents;
         System.out.println("На каждого ученика рассчитано " + sheetsStudent + " листов бумаги");
 
-        byte Performance = 16/2;
+        byte bottlesPerMinute = 16/2;
         byte time = 20;
-        int Performance20 = Performance * time;
-        System.out.println("За " + time + " минут машина произвела " + Performance20 + " штук бутылок");
-        int day = 24 * 60;
-        int timeDay = Performance * day;
-        System.out.println("За сутки  машина произвела " + timeDay + " штук бутылок");
-        int t3Day = 24 * 60 * 3;
-        int time3Day = Performance * t3Day;
-        System.out.println("За 3 дня  машина произвела " + time3Day + " штук бутылок");
-        int month = 24 * 60 * 30;
-        int timeMonth = Performance * month;
-        System.out.println("За месяц  машина произвела " + timeMonth + " штук бутылок");
+        int bottlesPer20Minutes = bottlesPerMinute * time;
+        System.out.println("За " + time + " минут машина произвела " + bottlesPer20Minutes + " штук бутылок");
+        int minutesPerDay = 24 * 60;
+        int bottlesPerDay = bottlesPerMinute * minutesPerDay;
+        System.out.println("За сутки  машина произвела " + bottlesPerDay + " штук бутылок");
+        int minutesPer3Days = minutesPerDay * 3;
+        int bottlesPer3Days = bottlesPerMinute * minutesPer3Days;
+        System.out.println("За 3 дня  машина произвела " + bottlesPer3Days + " штук бутылок");
+        int minutesPerMonth = 10 * minutesPer3Days;
+        int bottlesPerMonth = bottlesPerMinute * minutesPerMonth;
+        System.out.println("За месяц  машина произвела " + bottlesPerMonth + " штук бутылок");
 
+        byte totalPaint = 120;
         byte whitePaint = 2;
         byte paintBrown = 4;
-        int totalClasses = 60 / paintBrown;
+        int totalClasses = totalPaint / (paintBrown + whitePaint);
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalClasses * whitePaint + " банок белой краски и " + totalClasses * paintBrown + " банок коричневой краски");
 
         byte bananas = 5;
@@ -74,33 +75,33 @@ public class Main {
         System.out.println(massKilograms);
 
         int mass = 7000;
-        int gram = 250;
-        int amountOfDays = mass / gram;
+        int gram250 = 250;
+        int amountOfDays = mass / gram250;
         System.out.println(amountOfDays);
 
-        int mass1 = 7000;
-        int gram1 = 500;
-        int amountOfDays1 = mass1 / gram1;
+        mass = 7000;
+        int gram500 = 500;
+        int amountOfDays1 = mass / gram500;
         System.out.println(amountOfDays1);
 
         int averageDays = (amountOfDays + amountOfDays1) / 2;
         System.out.println(averageDays);
 
-        int Masha = 67760;
-        int Denis = 83690;
-        int Cristina = 76230;
+        int masha = 67760;
+        int denis = 83690;
+        int cristina = 76230;
 
-        float increaseMasha = Masha * 0.1f;
-        float increaseDenis = Denis * 0.1f;
-        float increaseCristina = Cristina * 0.1f;
+        float increaseMasha = masha * 0.1f;
+        float increaseDenis = denis * 0.1f;
+        float increaseCristina = cristina * 0.1f;
 
-        float salaryMasha = Masha + increaseMasha;
-        float salaryDenis = Denis + increaseDenis;
-        float salaryCristina = Cristina + increaseCristina;
+        float salaryMasha = masha + increaseMasha;
+        float salaryDenis = denis + increaseDenis;
+        float salaryCristina = cristina + increaseCristina;
 
-        float differenceMasha = salaryMasha % Masha;
-        float differenceDenis = salaryDenis % Denis;
-        float differenceCristina = salaryCristina % Cristina;
+        float differenceMasha = salaryMasha - masha;
+        float differenceDenis = salaryDenis - denis;
+        float differenceCristina = salaryCristina - cristina;
 
         System.out.println("Маша теперь получает " + salaryMasha + " рублей. Годовой доход вырос на " + differenceMasha);
         System.out.println("Денис теперь получает " + salaryDenis + " рублей. Годовой доход вырос на " + differenceDenis);
